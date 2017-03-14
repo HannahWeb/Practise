@@ -84,7 +84,7 @@ function printBr(element, index, array) {
 obj.arr.forEach(printBr);
 
 
-
+=======================================================================================
 
 
 
@@ -103,13 +103,17 @@ Object.freeze(O) / Object.isFrozen
 终极神器，完全冻结对象，在seal的基础上，属性值也不可以修改（每个属性的wirtable也被设为false）
 
 Object.freeze(o);
-        o.age = 25; //Cannot assign to read only property 'age' of #<Object>
+o.age = 25; //Cannot assign to read only property 'age' of #object
+
+
 ================================================================================================
 
 
 js的数组迭代器函数map和filter，可以遍历数组时产生新的数组，和python的map函数很类似
+
 1）filter是满足条件的留下，是对原数组的过滤；
 2）map则是对原数组的加工，映射成一一映射的新数组
+
 var xx = [1, 2, 5, 7];
 function pp(x){return x % 2;}
 function px(x){return x % 2;}
@@ -117,7 +121,9 @@ var m = xx.map(pp);
 console.log("m = " + m);
 var f = xx.filter(px);
 console.log("f = " + f);
+
 ～～～～～～～～～～～～～～～～～～～～～～～～～～～
+
 m = 1,0,1,1
 f = 1,5,7
 
